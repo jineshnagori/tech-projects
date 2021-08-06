@@ -189,7 +189,7 @@ p {
   padding: 0 0 5rem 0;
 }
 .service-box {
-  background-color: #dfdac7;
+  background-color: #e2c35a;
   max-width: 100%;
   height: 3rem;
   margin-bottom: 2rem;
@@ -200,6 +200,10 @@ p {
 }
 .service-box:hover {
   transform: scale(1.1);
+}
+
+.service-box p {
+  margin-top: 1%;
 }
 
 @media (max-width: 767px) {
