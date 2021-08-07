@@ -230,13 +230,5 @@ a {
 
 #style-scroll::-webkit-scrollbar-thumb
 {
-	background-color: #a58f44;	
-	background-image: -webkit-linear-gradient(45deg,
-	                                          rgba(255, 255, 255, .2) 25%,
-											  transparent 25%,
-											  transparent 50%,
-											  rgba(255, 255, 255, .2) 50%,
-											  rgba(255, 255, 255, .2) 75%,
-											  transparent 75%,
-											  transparent)
+	background-color: #a58f44;
 }
