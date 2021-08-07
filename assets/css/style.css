@@ -139,6 +139,19 @@ a {
   background-color: #000;
 }
 
+#button {
+  background: #a58f44;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+#button:hover {
+  color: #000;
+  background: #fff;
+  border: 3px solid #a58f44;
+}
+
 .display-2 {
   margin-bottom: 1rem;
   text-transform: capitalize;
