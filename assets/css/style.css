@@ -22,6 +22,35 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+select:focus, input:focus, textarea:focus{
+  outline: none!important;
+  box-shadow: none!important;
+  border: #000 solid 1px!important;
+  background-color: #fff!important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+select:required:invalid {
+  color: gray !important;
+}
+option[value=""][disabled] {
+  display: none !important;
+}
+
+select {
+  color: gray !important;
+}
+option {
+  color: #000000;
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
