@@ -22,11 +22,16 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-select:focus, input:focus, textarea:focus{
+input:focus, textarea:focus, select:focus {
   outline: none!important;
   box-shadow: none!important;
   border: #000 solid 1px!important;
   background-color: #fff!important;
+}
+
+button:focus {
+  outline: none!important;
+  box-shadow: none!important;
 }
 
 input:-webkit-autofill,
@@ -36,21 +41,6 @@ input:-webkit-autofill:active
 {
  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-
-select:required:invalid {
-  color: gray !important;
-}
-option[value=""][disabled] {
-  display: none !important;
-}
-
-select {
-  color: gray !important;
-}
-option {
-  color: #000000;
-}
-
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -273,4 +263,64 @@ a {
 #style-scroll::-webkit-scrollbar-thumb
 {
 	background-color: #a58f44;
+}
+
+.projects {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  position: relative;
+  top: 0;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  background: white;
+}
+.projects:hover,
+.projects:active,
+.projects:focus {
+  -webkit-box-shadow: 0 5px 50px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 50px -10px rgba(0, 0, 0, 0.1);
+  top: -2px;
+}
+.projects .projects-text {
+  border-top: none;
+  padding: 30px;
+}
+.projects .projects-text h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+#portfolio-flters {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+#portfolio-flters button {
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px 5px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: #444444;
+  transition: all 0.3s;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+#portfolio-flters button:hover,
+#portfolio-flters .active {
+  background: #a58f44;
+  color: #fff;
+}
+
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
 }
