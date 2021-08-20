@@ -324,3 +324,60 @@ a {
 .show {
   display: block;
 }
+
+#android {
+  background: #3DDC84;
+}
+
+#android h2 {
+  color: #fff;
+}
+
+#web {
+  background: #a58f44;
+}
+
+#web h2 {
+  color: #fff;
+}
+
+#web .heading-line::after {
+  background-color: #fff;
+}
+
+#web .heading-line::before {
+  background-color: #fff;
+}
+
+#python {
+  background: linear-gradient(90deg, #306998 50%, #ffd43b 50%);
+}
+
+#python h2 {
+  color: #fff;
+}
+
+#udemy {
+  background: #a58f44;
+}
+
+#udemy h2 {
+  color: #fff;
+}
+
+#udemy .heading-line::after {
+  background-color: #fff;
+}
+
+#udemy .heading-line::before {
+  background-color: #fff;
+}
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  width: 0%;
+  height: 4px;
+  background: blue;
+  z-index: 10000;
+}
