@@ -19,7 +19,12 @@
 </head>
 
 <body id="style-scroll">
-  <div id="scroll-progress"></div>
+
+  <!-- Pre-loader -->
+  <div class="preloader">
+    <div class="counter">0</div>
+  </div>
+
   <!-- Hero -->
   <section id="home" class="intro-section">
     <div class="container">
@@ -350,15 +355,19 @@
   })
 </script>
 <script>
-  const scrollProgress = document.getElementById('scroll-progress');
-  const height =
-    document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  function counter() {
+    var count = setInterval(function() {
+      var c = parseInt($('.counter').text());
+      $('.counter').text((++c).toString());
+      if (c == 100) {
+        clearInterval(count);
+        $('.counter').addClass('hide');
+        $('.preloader').addClass('active');
+      }
+    }, 60)
+  }
 
-  window.addEventListener('scroll', () => {
-    const scrollTop =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
-  });
+  counter();
 </script>
 
 </html>

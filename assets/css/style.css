@@ -41,6 +41,7 @@ input:-webkit-autofill:active
 {
  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -63,6 +64,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
+
 @media (min-width: 1200px) {
   h1, .h1 {
     font-size: 2.5rem;
@@ -72,6 +74,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: calc(1.325rem + 0.9vw);
 }
+
 @media (min-width: 1200px) {
   h2, .h2 {
     font-size: 2rem;
@@ -81,6 +84,7 @@ h2, .h2 {
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
 }
+
 @media (min-width: 1200px) {
   h3, .h3 {
     font-size: 1.75rem;
@@ -90,6 +94,7 @@ h3, .h3 {
 h4, .h4 {
   font-size: calc(1.275rem + 0.3vw);
 }
+
 @media (min-width: 1200px) {
   h4, .h4 {
     font-size: 1.5rem;
@@ -114,11 +119,58 @@ a {
   text-decoration: none !important;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #070707;
+  z-index: 100000000;
+  overflow: hidden !important;
+}
+
+.preloader:before {
+  content: "LOADING";
+  position: absolute;
+  font-size: 12em;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+.counter {
+  position: relative;
+  color: #fff;
+  font-size: 16em;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.counter:after {
+  content: "%";
+  font-size: 0.5em;
+}
+
+.hide {
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+}
+
+.preloader.active {
+  transform: translate(0, -100%);
+  transition: ease-in-out 2s;
+  transition-delay: 1s;
+}
+
 .display-2 {
   font-size: calc(1.575rem + 3.9vw);
   font-weight: 300;
   line-height: 1.2;
 }
+
 @media (min-width: 1200px) {
   .display-2 {
     font-size: 4.5rem;
@@ -134,6 +186,7 @@ a {
   background-color: #fff;
   display: block;
 }
+
 .btn-rounded span {
   position: absolute;
   background-color: #a58f44;
@@ -144,16 +197,19 @@ a {
   transform: translateY(-50%);
   border-radius: 50%;
 }
+
 .btn-rounded span i {
   color: #fff;
   font-size: 1rem;
   line-height: 2.5rem;
 }
+
 .btn-rounded:hover {
   background: #a58f44;
   border: 3px solid #fff;
   color: #fff;
 }
+
 .btn-rounded:hover span {
   background-color: #000;
 }
@@ -176,17 +232,20 @@ a {
   text-transform: capitalize;
   font-family: "Poppins", sans-serif;
 }
+
 .display-2--intro {
   display: inline-block;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
 }
+
 .display-2--description {
   font-size: 1rem;
   display: block;
   margin-top: 1.2rem;
   text-transform: none;
 }
+
 @media (min-width: 992px) {
   .display-2--description {
     font-size: 1.4rem;
@@ -224,6 +283,7 @@ a {
 .service {
   padding: 0 0 5rem 0;
 }
+
 .service-box {
   background-color: #e2c35a;
   max-width: 100%;
@@ -275,6 +335,7 @@ a {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   background: white;
 }
+
 .projects:hover,
 .projects:active,
 .projects:focus {
@@ -282,10 +343,12 @@ a {
   box-shadow: 0 5px 50px -10px rgba(0, 0, 0, 0.1);
   top: -2px;
 }
+
 .projects .projects-text {
   border-top: none;
   padding: 30px;
 }
+
 .projects .projects-text h3 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -371,13 +434,4 @@ a {
 
 #udemy .heading-line::before {
   background-color: #fff;
-}
-
-#scroll-progress {
-  position: fixed;
-  top: 0;
-  width: 0%;
-  height: 4px;
-  background: blue;
-  z-index: 10000;
 }
