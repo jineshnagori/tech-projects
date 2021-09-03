@@ -135,7 +135,7 @@ a {
 .preloader:before {
   content: "LOADING";
   position: absolute;
-  font-size: 12em;
+  font-size: calc(550% + 0.5vw);
   color: rgba(255, 255, 255, 0.3);
   font-weight: bold;
 }
@@ -143,7 +143,7 @@ a {
 .counter {
   position: relative;
   color: #fff;
-  font-size: 16em;
+  font-size: calc(900% + 0.5vw);
   font-weight: bold;
   z-index: 1;
 }
