@@ -170,6 +170,141 @@ a {
   transition-delay: 1s;
 }
 
+.navbar {
+  background-color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  box-shadow: 0 1.5px 6px 0 rgba(0, 0, 0, 0.3) !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.navbar .navbar-collapse {
+  margin-top: 1.3rem;
+}
+
+.navbar .navbar-brand {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.navbar .logo-image img {
+  width: 124px;
+  height: 32px;
+}
+
+.navbar .logo-text {
+  color: #000;
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 1rem;
+  text-decoration: none;
+}
+
+.offcanvas-collapse {
+  position: fixed;
+  top: 3.25rem;
+  bottom: 0;
+  left: 100%;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  overflow-y: auto;
+  visibility: hidden;
+  background-color: #ffffff;
+  transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.offcanvas-collapse.open {
+  visibility: visible;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.navbar .navbar-nav {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.navbar .nav-item .nav-link {
+  padding-top: 0.625rem;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .navbar .navbar-collapse {
+      margin-top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+      background-color: #ffffff;
+      box-shadow: none;
+      transition: all 0.2s;
+  }
+  .navbar.extra-page {
+      padding-top: 0.5rem;
+  }
+  .navbar.top-nav-collapse {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+  }
+  .offcanvas-collapse {
+      position: static;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      width: auto;
+      padding-right: 0;
+      padding-left: 0;
+      background-color: transparent;
+      overflow-y: visible;
+      visibility: visible;
+  }
+  .offcanvas-collapse.open {
+      -webkit-transform: none;
+      transform: none;
+  }
+  .navbar .navbar-nav {
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+  .navbar .nav-item .nav-link {
+      padding-right: 0.75rem;
+      padding-left: 0.75rem;
+  }
+  .navbar .dropdown-menu {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.08);
+  }
+  .navbar .dropdown-divider {
+      width: 90%;
+  }
+  .navbar .nav-item .btn-outline-sm {
+      margin-top: 0;
+      margin-left: 1rem;
+  }
+}
+
 .display-2 {
   font-size: calc(1.575rem + 3.9vw);
   font-weight: 300;
@@ -439,4 +574,76 @@ a {
 
 #udemy .heading-line::before {
   background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .intros {
+    padding-top: 10%;
+  }
+}
+
+footer {
+  background-color: #1a1a1a;
+}
+
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.footer p {
+  color: #fcfcfc;
+  text-decoration: none;
+}
+
+.footer h1 {
+  color: #ffffff;
+}
+
+.footer p:hover,
+.footer a:hover {
+  color: #ffffff !important;
+}
+
+.footer .nav li {
+  padding: 12px;
+}
+
+.footer .social-icons li {
+  margin: 8px;
+}
+
+.footer .social-icons li a {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ddd;
+  padding: 0px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 2.4em;
+  border-radius: 27px;
+  -moz-border-radius: 27px;
+  -webkit-border-radius: 27px;
+  transition: 0.5s;
+}
+
+.footer .social-icons li:hover a {
+  color: #1a1a1a !important;
+  background-color: #ffffff;
+  transition: 0.5s;
+}
+
+.footer .footer__copyright {
+  margin-top: 1em;
 }
