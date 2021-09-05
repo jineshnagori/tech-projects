@@ -362,7 +362,7 @@ a {
 }
 
 #button:hover {
-  color: #000;
+  color: #000 !important;
   background: #fff;
   border: 3px solid #a58f44;
 }
@@ -646,4 +646,9 @@ footer {
 
 .footer .footer__copyright {
   margin-top: 1em;
+}
+
+.dev {
+  border-radius: 50%;
+  width: 200px;
 }
