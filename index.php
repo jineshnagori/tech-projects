@@ -332,55 +332,6 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="get-started pt-2">
-    <div class="container">
-      <div class="row text-center">
-        <h2 class="fw-bold mb-3">Join</h2>
-        <div class="heading-line"></div>
-      </div>
-
-      <!-- START THE CTA CONTENT  -->
-      <div class="row d-flex justify-content-center align-items-center">
-        <div class="col-lg-6 col-md-12 bg-white p-3">
-          <div class="form w-100 pb-2">
-            <form action="#" class="row">
-              <div class="col-lg-6 col-md-12 mb-3" data-aos="fade-down" data-aos-duration="8000">
-                <input name="fname" type="text" placeholder="First Name" id="inputFirstName"
-                  class="form-control form-control-lg">
-              </div>
-              <div class="col-lg-6 col-md-12 mb-3" data-aos="fade-down" data-aos-duration="8000">
-                <input name="lname" type="text" placeholder="Last Name" id="inputLastName"
-                  class="form-control form-control-lg">
-              </div>
-              <div class="col-lg-6 col-md-12 mb-3" data-aos="fade-down" data-aos-duration="8000">
-                <input name="email" type="email" placeholder="Enter Yout Email" id="inputEmail"
-                  class="form-control form-control-lg">
-              </div>
-              <div class="col-lg-6 col-md-12 mb-3" data-aos="fade-down" data-aos-duration="8000">
-                <input list="join" placeholder="Join" class="form-control form-control-lg">
-                <datalist id="join">
-                  <option value="Sell Your Project Here">Sell Your Project Here</option>
-                  <option value="Become Reseller">Become Reseller</option>
-                  <option value="Online 1 to 1 Coaching">Online 1 to 1 Coaching</option>
-                </datalist>
-                </input>
-              </div>
-              <div class="col-lg-12 col-md-12 mb-3" data-aos="fade-down" data-aos-duration="8000">
-                <textarea name="message" placeholder="Message" id="message" rows="8"
-                  class="form-control form-control-lg"></textarea>
-              </div>
-              <div class="col-lg-12 col-md-12 mb-3 d-grid text-center">
-                <button type="submit" id="button" class="rounded-pill pt-3 pb-3">SUBMIT
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Hire -->
   <section id="hire" class="get-started pt-2">
     <div class="container">
@@ -410,6 +361,54 @@
             <h6>Android Developer</h6>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, voluptatem iusto enim incidunt sequi earum esse similique quis dolores illum aspernatur magnam nesciunt impedit et soluta quo eius culpa dicta quia! Praesentium tempora ipsam, eum temporibus in officiis nobis quae rem cum itaque libero soluta eligendi possimus asperiores pariatur quisquam.</p>
             <a id="button" href="" class="btn-primary p-2 text-white">HIRE ME</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="get-started pt-2">
+    <div class="container">
+      <div class="row text-center">
+        <h2 class="fw-bold mb-3">Join</h2>
+        <div class="heading-line"></div>
+      </div>
+
+      <!-- START THE CTA CONTENT  -->
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-6 col-md-12 bg-white p-3">
+          <div class="form w-100 pb-2">
+            <form method="POST" action="contact.php" class="row">
+              <div class="col-lg-6 col-md-12 mb-3" data-aos="fade-down" data-aos-duration="8000">
+                <input name="fname" type="text" placeholder="First Name" id="inputFirstName"
+                  class="form-control form-control-lg">
+              </div>
+              <div class="col-lg-6 col-md-12 mb-3" data-aos="fade-down" data-aos-duration="8000">
+                <input name="lname" type="text" placeholder="Last Name" id="inputLastName"
+                  class="form-control form-control-lg">
+              </div>
+              <div class="col-lg-6 col-md-12 mb-3" data-aos="fade-down" data-aos-duration="8000">
+                <input name="email" type="text" placeholder="Enter Yout Email" id="inputEmail"
+                  class="form-control form-control-lg">
+              </div>
+              <div class="col-lg-6 col-md-12 mb-3" data-aos="fade-down" data-aos-duration="8000">
+                <input list="joinus" placeholder="Join" name="joinus" class="form-control form-control-lg">
+                <datalist id="joinus">
+                  <option value="Sell Your Project Here">Sell Your Project Here</option>
+                  <option value="Become Reseller">Become Reseller</option>
+                  <option value="Online 1 to 1 Coaching">Online 1 to 1 Coaching</option>
+                </datalist>
+                </input>
+              </div>
+              <div class="col-lg-12 col-md-12 mb-3" data-aos="fade-down" data-aos-duration="8000">
+                <textarea name="message" placeholder="Message" id="message" rows="8"
+                  class="form-control form-control-lg"></textarea>
+              </div>
+              <div class="col-lg-12 col-md-12 mb-3 d-grid text-center">
+                <button type="submit" id="button" class="rounded-pill pt-3 pb-3">SUBMIT</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
