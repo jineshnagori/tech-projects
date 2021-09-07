@@ -178,36 +178,59 @@
     </div>
     <div class="container">
       <div class="row">
+        <?php
+            include 'config.php';
+            $sql = "SELECT * FROM app";
+            $result = mysqli_query($con, $sql);
+            $i = 1;
+            while($row = mysqli_fetch_assoc($result)) {
+        ?>
         <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-in-right" data-aos-duration="8000">
           <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
+            <a href="#appModal" data-toggle="modal"><img src="<?php echo $row['images']; ?>" alt="Image placeholder"
                 class="img-fluid"></a>
             <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Android Project</a></h3>
+              <h3 class="text-center"><a href="#appModal" data-toggle="modal"><?php echo $row['pname']; ?></a></h3>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-out" data-aos-duration="8000">
-          <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
-                class="img-fluid"></a>
-            <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Android Project</a></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-in-left" data-aos-duration="8000">
-          <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
-                class="img-fluid"></a>
-            <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Android Project</a></h3>
-            </div>
-          </div>
-        </div>
+        <?php
+            $i++;
+          }
+        ?>
       </div>
     </div>
   </section>
+
+  <div class="modal" id="appModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <?php
+      include 'config.php';
+      $sql = "SELECT * FROM app";
+      $result = mysqli_query($con, $sql);
+      $i = 1;
+      while($row = mysqli_fetch_assoc($result)) {
+    ?>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="pt-4">
+            <img src="<?php echo $row['images']; ?>" class="img-fluid p-2">
+        </div>
+        <div class="modal-body">
+          <div>
+            <h3 class="fw-bold"><?php echo $row['pname']; ?></h3>
+            <p class="text-muted"><?php echo $row['pdesc']; ?></p>
+          </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <a href="#" class="btn btn-primary text-white">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <?php
+        $i++;
+      }
+    ?>
+  </div>
 
   <!-- Web Projects -->
   <section id="web" class="project">
@@ -219,36 +242,59 @@
     </div>
     <div class="container">
       <div class="row">
+        <?php
+            include 'config.php';
+            $sql = "SELECT * FROM web";
+            $result = mysqli_query($con, $sql);
+            $i = 1;
+            while($row = mysqli_fetch_assoc($result)) {
+        ?>
         <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-in-right" data-aos-duration="8000">
           <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
+            <a href="#appModal" data-toggle="modal"><img src="<?php echo $row['images']; ?>" alt="Image placeholder"
                 class="img-fluid"></a>
             <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Web Project</a></h3>
+              <h3 class="text-center"><a href="#appModal" data-toggle="modal"><?php echo $row['pname']; ?></a></h3>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-out" data-aos-duration="8000">
-          <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
-                class="img-fluid"></a>
-            <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Web Project</a></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-in-left" data-aos-duration="8000">
-          <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
-                class="img-fluid"></a>
-            <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Web Project</a></h3>
-            </div>
-          </div>
-        </div>
+        <?php
+            $i++;
+          }
+        ?>
       </div>
     </div>
   </section>
+
+  <div class="modal" id="appModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <?php
+      include 'config.php';
+      $sql = "SELECT * FROM web";
+      $result = mysqli_query($con, $sql);
+      $i = 1;
+      while($row = mysqli_fetch_assoc($result)) {
+    ?>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="pt-4">
+            <img src="<?php echo $row['images']; ?>" class="img-fluid p-2">
+        </div>
+        <div class="modal-body">
+          <div>
+            <h3 class="fw-bold"><?php echo $row['pname']; ?></h3>
+            <p class="text-muted"><?php echo $row['pdesc']; ?></p>
+          </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <a href="#" class="btn btn-primary text-white">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <?php
+        $i++;
+      }
+    ?>
+  </div>
 
   <!-- Python Projects -->
   <section id="python" class="project">
@@ -260,77 +306,59 @@
     </div>
     <div class="container">
       <div class="row">
+        <?php
+            include 'config.php';
+            $sql = "SELECT * FROM python";
+            $result = mysqli_query($con, $sql);
+            $i = 1;
+            while($row = mysqli_fetch_assoc($result)) {
+        ?>
         <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-in-right" data-aos-duration="8000">
           <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
+            <a href="#appModal" data-toggle="modal"><img src="<?php echo $row['images']; ?>" alt="Image placeholder"
                 class="img-fluid"></a>
             <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Python Project</a></h3>
+              <h3 class="text-center"><a href="#appModal" data-toggle="modal"><?php echo $row['pname']; ?></a></h3>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-out" data-aos-duration="8000">
-          <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
-                class="img-fluid"></a>
-            <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Python Project</a></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-in-left" data-aos-duration="8000">
-          <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
-                class="img-fluid"></a>
-            <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Python Project</a></h3>
-            </div>
-          </div>
-        </div>
+        <?php
+            $i++;
+          }
+        ?>
       </div>
     </div>
   </section>
 
-  <!-- Udemy Projects -->
-  <section id="udemy" class="project">
-    <div class="container">
-      <div class="row text-center">
-        <h2 class="fw-bold mb-3 mt-4">Udemy Free Courses</h2>
-        <div class="heading-line mb-5"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-in-right" data-aos-duration="8000">
-          <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
-                class="img-fluid"></a>
-            <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Python Course</a></h3>
-            </div>
+  <div class="modal" id="appModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <?php
+      include 'config.php';
+      $sql = "SELECT * FROM python";
+      $result = mysqli_query($con, $sql);
+      $i = 1;
+      while($row = mysqli_fetch_assoc($result)) {
+    ?>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="pt-4">
+            <img src="<?php echo $row['images']; ?>" class="img-fluid p-2">
+        </div>
+        <div class="modal-body">
+          <div>
+            <h3 class="fw-bold"><?php echo $row['pname']; ?></h3>
+            <p class="text-muted"><?php echo $row['pdesc']; ?></p>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-out" data-aos-duration="8000">
-          <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
-                class="img-fluid"></a>
-            <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Android Course</a></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-in-left" data-aos-duration="8000">
-          <div class="projects">
-            <a href="#exampleModal" data-toggle="modal"><img src="assets/images/projects/1.png" alt="Image placeholder"
-                class="img-fluid"></a>
-            <div class="projects-text">
-              <h3 class="text-center"><a href="#exampleModal" data-toggle="modal">Web Dev Course</a></h3>
-            </div>
-          </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <a href="#" class="btn btn-primary text-white">Buy Now</a>
         </div>
       </div>
     </div>
-  </section>
+    <?php
+        $i++;
+      }
+    ?>
+  </div>
 
   <!-- Hire -->
   <section id="hire" class="get-started pt-2">
@@ -462,40 +490,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Modal -->
-  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="owl-carousel owl-theme pt-4">
-          <div class="item p-2">
-            <img src="assets/images/projects/1.png" alt="Image placeholder" class="img-fluid">
-          </div>
-          <div class="item p-2">
-            <img src="assets/images/projects/1.png" alt="Image placeholder" class="img-fluid">
-          </div>
-          <div class="item p-2">
-            <img src="assets/images/projects/1.png" alt="Image placeholder" class="img-fluid">
-          </div>
-        </div>
-        <div class="modal-body">
-          <div>
-            <h3 class="fw-bold">Udemy Course</h3>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum
-              laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi.
-              Impedit temporibus nisi accusamus.</p>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum
-              laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi.
-              Impedit temporibus nisi accusamus.</p>
-          </div>
-        </div>
-        <div class="modal-footer d-flex justify-content-center">
-          <a href="#" class="btn btn-primary text-white">Buy Now</a>
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -84,10 +84,10 @@
                 <textarea name="pdesc" placeholder="Project Description" id="message" rows="8" class="form-control form-control-lg"></textarea>
               </div>
               <div class="col-12 mb-3" data-aos="fade-down" data-aos-duration="8000">
-                <input type="file" name="images[]" multiple class="form-control form-control-lg">
+                <input type="file" name="image" class="form-control form-control-lg">
               </div>
               <div class="col-lg-12 col-md-12 mb-3 d-grid text-center">
-                <button type="submit" name="submit" id="button" class="rounded-pill pt-3 pb-3">SUBMIT</button>
+                <button type="submit" name="post" id="button" class="rounded-pill pt-3 pb-3">SUBMIT</button>
               </div>
             </form>
           </div>
