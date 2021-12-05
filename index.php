@@ -187,7 +187,7 @@
         ?>
         <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-in-right" data-aos-duration="8000">
           <div class="projects">
-            <a href="#appModal" data-toggle="modal"><img src="<?php echo $row['images']; ?>" alt="Image placeholder"
+            <a href="#appModal" data-toggle="modal"><img src="assets/images/upload/android/<?php echo $row['images']; ?>" alt="Image placeholder"
                 class="img-fluid"></a>
             <div class="projects-text">
               <h3 class="text-center"><a href="#appModal" data-toggle="modal"><?php echo $row['pname']; ?></a></h3>
@@ -213,7 +213,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="pt-4">
-            <img src="<?php echo $row['images']; ?>" class="img-fluid p-2">
+            <img src="assets/images/upload/android/<?php echo $row['images']; ?>" class="img-fluid p-2">
         </div>
         <div class="modal-body">
           <div>
@@ -251,7 +251,7 @@
         ?>
         <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-in-right" data-aos-duration="8000">
           <div class="projects">
-            <a href="#appModal" data-toggle="modal"><img src="<?php echo $row['images']; ?>" alt="Image placeholder"
+            <a href="#appModal" data-toggle="modal"><img src="assets/images/upload/web/<?php echo $row['images']; ?>" alt="Image placeholder"
                 class="img-fluid"></a>
             <div class="projects-text">
               <h3 class="text-center"><a href="#appModal" data-toggle="modal"><?php echo $row['pname']; ?></a></h3>
@@ -277,7 +277,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="pt-4">
-            <img src="<?php echo $row['images']; ?>" class="img-fluid p-2">
+            <img src="assets/images/upload/web/<?php echo $row['images']; ?>" class="img-fluid p-2">
         </div>
         <div class="modal-body">
           <div>
@@ -315,7 +315,7 @@
         ?>
         <div class="col-sm-6 col-lg-4 mb-4" data-aos="zoom-in-right" data-aos-duration="8000">
           <div class="projects">
-            <a href="#appModal" data-toggle="modal"><img src="<?php echo $row['images']; ?>" alt="Image placeholder"
+            <a href="#appModal" data-toggle="modal"><img src="assets/images/upload/python/<?php echo $row['images']; ?>" alt="Image placeholder"
                 class="img-fluid"></a>
             <div class="projects-text">
               <h3 class="text-center"><a href="#appModal" data-toggle="modal"><?php echo $row['pname']; ?></a></h3>
@@ -341,7 +341,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="pt-4">
-            <img src="<?php echo $row['images']; ?>" class="img-fluid p-2">
+            <img src="assets/images/upload/python/<?php echo $row['images']; ?>" class="img-fluid p-2">
         </div>
         <div class="modal-body">
           <div>
